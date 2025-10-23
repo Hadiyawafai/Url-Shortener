@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+
+<body>
+    <h1>Signup</h1> 
+     <% if (error){ %>
+    <p style="color:red"><%= error%></p>
+    <% } %>
+    <form action="/user/createuser" method="post" enctype="multipart/form-data">
+        <label>Username</label>
+        <input type="text" required name="username">
+        <label>Email</label>
+        <input type="text" required name="email">
+        <label>Password</label>
+        <input type="text" required name="password">
+        <label>profile</label>
+        <input type="file" name="profile" required>
+
+        <button type="submit">Signup</button>
+    </form>
+
+
+</body>
+
+</html>
+
+</html>
