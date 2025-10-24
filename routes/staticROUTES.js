@@ -37,6 +37,7 @@ router.get('/', restrictTo(["NORMAL","ADMIN"]),async (req, res) => {
         // Send a response only once
         return res.render("home", {
             url: allUrls,
+            message: null
 
         });
 
