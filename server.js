@@ -37,7 +37,7 @@ app.use(checkAuthentication)
                                                             //explain
 app.use("/user", signUproutes,);
 
-app.use("/", staticRoute);
+app.use("/",checkAuthentication, staticRoute);
 app.use("/url",restrictTo(["NORMAL","ADMIN"]),urlRoute)
 
 mongoose.connect(MONGO_URI)
